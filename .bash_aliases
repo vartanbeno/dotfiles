@@ -61,8 +61,8 @@ alias pg='docker container run -d --name capstonedb -e POSTGRES_PASSWORD=schedul
 alias rmpg='docker container rm -f capstonedb; docker volume rm pgdata'
 alias p='rmpg; pg'
 alias cap='cd ~/Desktop/Courses/SOEN\ 490\ \(Capstone\)/AppointmentScheduler'
-alias rmimg='docker image rmi appointment-scheduler-client appointment-scheduler-server'
-alias crm='(cap && c down && imgpr && rmimg && rmpgd)'
+alias rmi='docker image rmi appointment-scheduler-client appointment-scheduler-server'
+alias crm='(cap && c down && imgpr && rmi && docker volume rm pgdata)'
 
 # IDE
 alias idea='/usr/local/bin/idea'
