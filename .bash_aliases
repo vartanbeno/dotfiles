@@ -29,7 +29,10 @@ alias vh='cd ~/git/angular/ViewHub'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'" 
 alias hi='ssh vartanbeno@10.0.1.97'
 alias letmein='ssh -p 22 vartanbeno@70.80.47.25'
-alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# First is public IP, second is local
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
 # bash_aliases aliases because it's annoying to type
 alias v='vi ~/.bash_aliases'

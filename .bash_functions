@@ -48,6 +48,6 @@ rename_branch() {
     fi
 }
 
-createpg() {
+mkpg() {
     docker container run -d --name $1 -e POSTGRES_USER=$2 -e POSTGRES_PASSWORD=$3 -e POSTGRES_DB=$4 -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:11
 }
