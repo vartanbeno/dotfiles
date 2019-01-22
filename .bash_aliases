@@ -36,7 +36,8 @@ alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '(
 
 # bash_aliases aliases because it's annoying to type
 alias v='vi ~/.bash_aliases'
-alias src='source ~/.bash_aliases'
+alias vf='vi ~/.bash_functions'
+alias src='source ~/.bashrc'
 
 # Git
 alias url='git config --get remote.origin.url'
