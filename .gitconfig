@@ -9,6 +9,7 @@
         lg = !"git lg3"
         c = commit -s --cleanup=scissors
         s = status
+        sd = status .
         b = branch
         ba = branch -a
         bv = branch -vv

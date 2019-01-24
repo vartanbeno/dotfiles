@@ -23,6 +23,7 @@ alias cl='clear'
 alias grep='grep --color=auto'
 alias u='uptime'
 alias python='python3'
+alias pip='pip3'
 alias vh='cd ~/git/angular/ViewHub'
 # currently using for postgres container
 #alias p='mdls -name kMDItemNumberOfPages'
