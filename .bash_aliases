@@ -29,13 +29,13 @@ alias vh='cd ~/git/angular/ViewHub'
 #alias p='mdls -name kMDItemNumberOfPages'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'" 
 alias hi='ssh vartanbeno@10.0.1.97'
-alias letmein='ssh -p 22 vartanbeno@70.80.47.25'
+alias letmein='ssh -p 22001 vartanbeno@vartanbeno.com'
 
 # First is public IP, second is local
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
-# bash_aliases aliases because it's annoying to type
+# dotfile aliases because they're annoying to type
 alias v='vi ~/.bash_aliases'
 alias vf='vi ~/.bash_functions'
 alias src='source ~/.bashrc'
@@ -62,11 +62,11 @@ alias volpr='docker volume prune -f'
 alias syspr='docker system prune -f --volumes'
 
 # SOEN 490 (Capstone)
-alias pg='docker container run -d --name capstonedb -e POSTGRES_PASSWORD=scheduler -e POSTGRES_USER=scheduler -e POSTGRES_DB=scheduler -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:11'
-alias rmpg='docker container rm -f capstonedb; docker volume rm pgdata'
+alias pg='mkpg scheduler'
+alias rmpg='docker container rm -f scheduler; docker volume rm pgdata'
 alias p='rmpg; pg'
 alias cap='cd ~/Desktop/Courses/SOEN\ 490\ \(Capstone\)/AppointmentScheduler'
-alias rmi='docker image rmi appointment-scheduler-client appointment-scheduler-server'
+alias rmi='docker image rmi appointment-scheduler-client appointment-scheduler-server appointment-scheduler-reminders'
 alias crm='(cap && c down && imgpr && rmi && docker volume rm pgdata)'
 
 # IDE

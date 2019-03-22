@@ -49,5 +49,21 @@ rename_branch() {
 }
 
 mkpg() {
-    docker container run -d --name $1 -e POSTGRES_USER=$2 -e POSTGRES_PASSWORD=$3 -e POSTGRES_DB=$4 -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:11
+    docker container run -d --name $1 -e POSTGRES_USER=$1 -e POSTGRES_PASSWORD=$1 -e POSTGRES_DB=$1 -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:11
+}
+
+clone() {
+    git clone "$1" && cd "$(basename "$1" .git)"
+}
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+copy() {
+    cat $1 | pbcopy
+}
+
+findit() {
+    grep -E "$1|$" $2
 }
