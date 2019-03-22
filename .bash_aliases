@@ -72,3 +72,7 @@ alias crm='(cap && c down && imgpr && rmi && docker volume rm pgdata)'
 # IDE
 alias idea='/usr/local/bin/idea'
 alias py='/usr/local/bin/charm'
+
+# Connecting AirPods, make sure to use the MAC address of your pair
+# Uses bluetoothconnector package, install with Homebrew by running: brew install bluetoothconnector
+alias air='BluetoothConnector 4C-32-75-C1-F3-D7 --notify'
