@@ -61,9 +61,21 @@ parse_git_branch() {
 }
 
 copy() {
-    cat $1 | pbcopy
+    cat "${1}" | pbcopy
 }
 
 findit() {
-    grep -E "$1|$" $2
+    grep -E "$2|$" $1
+}
+
+finditi() {
+    grep -iE "$2|$" $1
+}
+
+doit() {
+    for i in $(eval echo {1..$1}); do eval ${@:2}; done
+}
+
+doitp() {
+    for i in $(eval echo {1..$1}); do echo -n "$i: "; eval ${@:2}; done
 }

@@ -16,3 +16,9 @@
         ba = branch -a
         bv = branch -vv
         diffs = diff --staged
+        shoq = show --quiet
+        c- = checkout -
+
+# Tip: how to exclude a file from git grep/show/etc.
+# git show -- './*' ':!package-lock.json'
+# git grep something -- './*' ':!directory'

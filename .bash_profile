@@ -14,3 +14,5 @@ fi
 # if Docker completion isn't working, see: https://stackoverflow.com/questions/26132451/how-to-add-bash-command-completion-for-docker-on-mac-os-x
 
 export PATH=~/.npm-global/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
