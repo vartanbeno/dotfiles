@@ -28,7 +28,7 @@ alias pip='pip3'
 #alias p='mdls -name kMDItemNumberOfPages'
 alias docs='cd ~/Documents'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'" 
-alias hi='ssh vartanbeno@10.0.1.97'
+alias hi='ssh vartanbeno@10.0.0.34'
 alias letmein='ssh -p 22001 vartanbeno@vartanbeno.com'
 
 # First is public IP, second is local
